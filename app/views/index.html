@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Easy TeX</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  </head>
+
+  <body>
+
+    <div class="p-2 mw-100 mh-100 bg-light" style="height: 100vh">
+
+      <div class="p-2 mx-auto">
+	<h1 class="text-center">Easy TeX</h1>
+      </div>
+
+      <!-- TODO: drag and drop -->
+      <!-- <div id="dropzone" class="p-2 bg-info" style="height: 50vh" effectAllowed="move">
+	   <p class="text-center">Drag files here!(Chrome or Firefox)</p>
+	   </div> -->
+
+      <div id="display">
+	<div class="p-2 mx-auto" style="width: 350px;">
+	  <form>
+	    <input type="file" multiple="multiple" @change="onDrop" webkitdirectory>
+	  </form>
+	</div>
+
+	<div class="p-2 mx-auto" style="width: 100px;">
+	  <input type="submit" value="Compile!!" v-on:click="compile" v-if="!show" class="btn btn-primary">
+	</div>
+	<v-loading :show="show"></v-loading>
+
+      </div>
+
+      <div class="p-2 mx-auto" style="width: 200px;">
+	<a href="static/template.zip" download="Template">
+	  <p class="text-center">Download this Template!</p>
+	</a>
+      </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.25/bootstrap-native-v4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script type="text/javascript" src="/static/main.js"></script>
+  </body>
+
+</html>
