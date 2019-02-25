@@ -8,12 +8,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   </head>
 
-  <body>
+  <body class="bg-light">
+    <div class="mx-auto" style="width: 200px;">
+      <h1>Easy TeX</h1>
+    </div>
 
-    <div class="p-2 mw-100 mh-100 bg-light" style="height: 100vh">
-
-      <div class="p-2 mx-auto">
-	<h1 class="text-center">Easy TeX</h1>
+    <ol>
+      <div class="mx-auto" style="width: 350px;">
+	<li style="font-size: 21pt;">
+	  <a href="static/template.zip" download="Template" style="font-size: 21pt;">
+	    Download this Template!
+	  </a>
+	</li>
       </div>
 
       <!-- TODO: drag and drop -->
@@ -22,31 +28,26 @@
 	   </div> -->
 
       <div id="display">
-	<div class="p-2 mx-auto" style="width: 350px;">
-	  <form>
-	    <input type="file" multiple="multiple" @change="onDrop" webkitdirectory>
-	  </form>
+	<div class="mx-auto m-3" style="width: 350px;">
+	  <li style="font-size: 21pt;">
+	    <form>
+	      <input type="file" multiple="multiple" @change="onDrop" webkitdirectory style="font-size: 15pt;">
+	    </form>
+	  </li>
 	</div>
 
-	<div class="p-2 mx-auto" style="width: 100px;">
-	  <input type="submit" value="Compile!!" v-on:click="compile" v-if="!show" class="btn btn-primary">
+	<div class="mx-auto" style="width: 350px;">
+	  <li style="font-size: 21pt;">
+	    <input type="submit" value="Compile!!" v-on:click="compile" v-if="!show" class="btn btn-primary">
+	  </li>
 	</div>
 	<v-loading :show="show"></v-loading>
-
-      </div>
-
-      <div class="p-2 mx-auto" style="width: 200px;">
-	<a href="static/template.zip" download="Template">
-	  <p class="text-center">Download this Template!</p>
-	</a>
-      </div>
-
     </div>
+    </ol>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.25/bootstrap-native-v4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
     <script type="text/javascript" src="/static/main.js"></script>
   </body>
-
 </html>
